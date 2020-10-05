@@ -76,5 +76,15 @@ $(document).ready(function() {
         scrollbar: {
             el: '.swiper-scrollbar',
         },
-    })
+    });
+
+
+
+    ScrollOut({
+        /* options */
+    });
+
+
+
+
 });
