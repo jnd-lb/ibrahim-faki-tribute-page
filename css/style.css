@@ -3,9 +3,12 @@
     --black: #161616;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 20px;
-    box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -220,4 +223,116 @@ nav {
 
 #life div:hover {
     flex-grow: 3;
+}
+
+#work {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#work .timeline {
+    width: 80%;
+}
+
+#work .timeline ul {
+    list-style: none;
+}
+
+#work .timeline ul li {
+    width: 50%;
+    padding: 0 20px 150px 20px;
+}
+
+#work .timeline ul li h2 {
+    margin: 0;
+    transform: translateY(-50%);
+    color: #3acdd5;
+}
+
+#work .timeline ul li p {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#work .timeline ul li:nth-child(even) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+#work .timeline ul li:nth-child(odd) {
+    text-align: left;
+    float: right;
+    clear: both;
+}
+
+#work .timeline ul li::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgb(58, 205, 213);
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    z-index: 11;
+}
+
+#work .timeline ul::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(202, 202, 202);
+    width: 2px;
+    height: 100%;
+    left: calc(50% - 20px);
+    transform: translate(-50%);
+}
+
+#work .timeline ul li span {
+    background-color: #3acdd5;
+    display: inline;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    font-weight: 800;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 0px 4px rgba(15, 185, 177, .3);
+}
+
+#work .timeline ul li p {
+    line-height: 20px;
+}
+
+#work .timeline ul li:nth-child(odd) span {
+    right: calc(50% + 50px);
+}
+
+#work .timeline ul li:nth-child(even) span {
+    left: calc(50% + 10px);
+}
+
+#books {
+    position: relative;
+}
+
+#books .book-bg {
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/nature.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#books img {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
