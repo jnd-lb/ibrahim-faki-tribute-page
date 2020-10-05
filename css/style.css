@@ -318,21 +318,67 @@ nav {
 }
 
 #books {
+    overflow: hidden;
     position: relative;
-}
-
-#books .book-bg {
-    position: relative;
-    z-index: -1;
     height: 100vh;
-    width: 100vw;
     background-image: url(../images/nature.jpg);
     background-size: cover;
     background-position: center;
 }
 
-#books img {
-    bottom: 0;
+#books img.book-table {
     position: absolute;
+    bottom: 0;
+}
+
+.swiper-container {
+    bottom: 0;
+    position: absolute !important;
     width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.slide-content img {
+    width: 300px;
+}
+
+.slide-content-text {
+    background-color: rgba(255, 255, 255, 0.342);
+    padding: 20px;
+    margin-left: 20px;
+    height: 90%;
+}
+
+.slide-content-text h3 {
+    font-weight: 900;
+}
+
+.slide-content p {
+    height: calc(100% - 40px);
+    width: 300px;
+    color: rgb(0, 0, 0);
+}
+
+img::after {
+    position: absolute !important;
+    bottom: 0 !important;
+    content: "ksssssss" !important;
+    width: 300px !important;
+    height: 200px !important;
+    background-color: black !important;
+    filter: blur(2px) !important;
 }
